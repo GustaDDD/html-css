@@ -6,8 +6,9 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu
@@ -32,6 +33,17 @@
         </article>
     </main>
     <script>
+        
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                itens.style.display = 'block'
+            }
+            else{
+                itens.style.display = 'none'
+            }
+        }
+
+
          function clickMenu() {
             var navItens = document.getElementById('itens');
             if (navItens.style.display === 'block' || navItens.style.display === '') {
